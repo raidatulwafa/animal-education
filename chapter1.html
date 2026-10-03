@@ -684,49 +684,38 @@
 
 <script>
 
+const correctSound = new Audio("correct.mp3");
+const wrongSound = new Audio("wrong.mp3");
+
 function checkQuiz() {
-
     let score = 0;
-
-    let q1 = document.querySelector(
-        'input[name="q1"]:checked'
-    );
-
-    let q2 = document.querySelector(
-        'input[name="q2"]:checked'
-    );
-
+    let q1 = document.querySelector('input[name="q1"]:checked');
+    let q2 = document.querySelector('input[name="q2"]:checked');
 
     if (q1 && q1.value === "elephant") {
-
         score++;
-
     }
-
 
     if (q2 && q2.value === "nose") {
-
         score++;
-
     }
-
 
     let result = document.getElementById("quiz-result");
 
-
     if (!q1 || !q2) {
-
-        result.innerHTML =
-            "⚠️ Please answer all questions.";
-
+        result.innerHTML = "⚠️ Please answer all questions.";
         return;
-
     }
 
+    if (score === 2) {
+        correctSound.currentTime = 0;
+        correctSound.play();
+    } else {
+        wrongSound.currentTime = 0;
+        wrongSound.play();
+    }
 
-    result.innerHTML =
-        "🎉 Your score: " + score + " / 2";
-
+    result.innerHTML = "🎉 Your score: " + score + " / 2";
 }
 
 
