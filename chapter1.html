@@ -140,16 +140,11 @@
             text-align: center;
         }
 
-        .video-placeholder {
-            background: #263238;
-            color: white;
-            height: 300px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .video-box iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
             border-radius: 15px;
-            font-size: 22px;
-            margin-top: 20px;
         }
 
         audio {
@@ -272,6 +267,22 @@
                 padding: 20px;
             }
 
+            .video-box iframe {
+                height: 220px;
+            }
+
+            .game-option {
+                width: 100%;
+            }
+
+            .navigation {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .navigation a {
+                text-align: center;
+            }
         }
 
     </style>
@@ -315,65 +326,46 @@
 
     <section class="section">
 
-    <h2>📖 About the Elephant</h2>
+        <h2>📖 About the Elephant</h2>
 
-    <img 
-        src="gajah.jpg" 
-        alt="An elephant"
-        class="animal-image"
-    >
+        <img
+            src="gajah.jpg"
+            alt="An elephant"
+            class="animal-image"
+        >
 
-    <p>
+        <p>
+            Elephants are large mammals known for their long trunks,
+            large ears and strong bodies. They are social animals and
+            often live in groups.
+        </p>
 
-        Elephants are large mammals known for their long trunks,
-        large ears and strong bodies. They are social animals and
-        often live in groups.
-
-    </p>
-
-    <p>
-
-        Elephants use their trunks for many activities including
-        breathing, smelling, touching and picking up food.
-
-    </p>
+        <p>
+            Elephants use their trunks for many activities including
+            breathing, smelling, touching and picking up food.
+        </p>
 
 
         <div class="facts">
 
             <div class="fact">
-
                 <strong>🐘 Size</strong>
-
                 One of the largest land animals
-
             </div>
 
-
             <div class="fact">
-
                 <strong>🌿 Food</strong>
-
                 Mainly plants
-
             </div>
 
-
             <div class="fact">
-
                 <strong>👥 Social</strong>
-
                 Often live in groups
-
             </div>
 
-
             <div class="fact">
-
                 <strong>👃 Trunk</strong>
-
                 Used for many functions
-
             </div>
 
         </div>
@@ -389,28 +381,24 @@
         <h2>🎥 Educational Video</h2>
 
         <p>
-
             Watch an educational video to learn more about elephants.
-
         </p>
 
+        <div class="video-box">
 
-       <div class="video-box">
-
-    <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/CjLSxQAJ-TY?si=mQJr9mU-2JWjtXCr"
-        title="Elephant Educational Video"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen>
-    </iframe>
+            <iframe
+                src="https://www.youtube.com/embed/CjLSxQAJ-TY?si=mQJr9mU-2JWjtXCr"
+                title="Elephant Educational Video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
 
         </div>
 
     </section>
+
 
 
     <!-- QURAN -->
@@ -420,37 +408,26 @@
         <h2>📖 The Elephant in the Quran</h2>
 
         <p>
-
             The elephant is connected with the story described in
             <strong>Surah Al-Fil (Chapter 105)</strong>.
-
             The surah tells about the people of the elephant and
             Allah's protection of the Ka'bah.
-
         </p>
 
 
         <div class="quran-box">
 
             <p class="arabic">
-
                 أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ
-
             </p>
-
 
             <p class="translation">
-
                 "Have you not seen how your Lord dealt with the
                 companions of the elephant?"
-
             </p>
 
-
             <p>
-
                 — Surah Al-Fil, 105:1
-
             </p>
 
         </div>
@@ -466,11 +443,8 @@
         <h2>🎧 Quran Recitation</h2>
 
         <p>
-
             Listen to the recitation of Surah Al-Fil.
-
         </p>
-
 
         <audio controls>
 
@@ -493,40 +467,24 @@
 
             <h3>1. Which animal is mentioned in Surah Al-Fil?</h3>
 
-
             <label>
-
                 <input type="radio" name="q1" value="elephant">
-
                 🐘 Elephant
-
             </label>
 
-
             <label>
-
                 <input type="radio" name="q1" value="camel">
-
                 🐪 Camel
-
             </label>
 
-
             <label>
-
                 <input type="radio" name="q1" value="horse">
-
                 🐎 Horse
-
             </label>
 
-
             <label>
-
                 <input type="radio" name="q1" value="lion">
-
                 🦁 Lion
-
             </label>
 
         </div>
@@ -537,49 +495,31 @@
 
             <h3>2. What is an elephant's trunk?</h3>
 
-
             <label>
-
                 <input type="radio" name="q2" value="nose">
-
                 A long nose and flexible organ
-
             </label>
 
-
             <label>
-
                 <input type="radio" name="q2" value="tail">
-
                 The elephant's tail
-
             </label>
 
-
             <label>
-
                 <input type="radio" name="q2" value="ear">
-
                 The elephant's ear
-
             </label>
 
-
             <label>
-
                 <input type="radio" name="q2" value="leg">
-
                 The elephant's leg
-
             </label>
 
         </div>
 
 
         <button class="quiz-button" onclick="checkQuiz()">
-
             Check My Answers
-
         </button>
 
 
@@ -595,12 +535,9 @@
 
         <h2>🎮 Guess the Animal</h2>
 
-
         <p>
-
             Which animal has a long trunk, large ears and a
             powerful body?
-
         </p>
 
 
@@ -608,33 +545,25 @@
 
             <button class="game-option"
                 onclick="checkGame('cat')">
-
                 🐱 Cat
-
             </button>
 
 
             <button class="game-option"
                 onclick="checkGame('elephant')">
-
                 🐘 Elephant
-
             </button>
 
 
             <button class="game-option"
                 onclick="checkGame('bird')">
-
                 🐦 Bird
-
             </button>
 
 
             <button class="game-option"
                 onclick="checkGame('fish')">
-
                 🐟 Fish
-
             </button>
 
         </div>
@@ -651,16 +580,11 @@
     <div class="navigation">
 
         <a href="index.html">
-
             ← Home
-
         </a>
 
-
         <a href="#">
-
             Next Chapter →
-
         </a>
 
     </div>
@@ -673,9 +597,7 @@
 <footer>
 
     <p>
-
         © 2026 Animal Education | Chapter 1
-
     </p>
 
 </footer>
@@ -684,60 +606,114 @@
 
 <script>
 
-const correctSound = new Audio("correct.mp3");
-const wrongSound = new Audio("wrong.mp3");
+    /* =========================
+       SOUND EFFECTS
+    ========================= */
 
-function checkQuiz() {
-    let score = 0;
-    let q1 = document.querySelector('input[name="q1"]:checked');
-    let q2 = document.querySelector('input[name="q2"]:checked');
+    const correctSound = new Audio("correct.mp3");
+    const wrongSound = new Audio("wrong.mp3");
 
-    if (q1 && q1.value === "elephant") {
-        score++;
+
+    /* =========================
+       QUIZ
+    ========================= */
+
+    function checkQuiz() {
+
+        let score = 0;
+
+        let q1 = document.querySelector(
+            'input[name="q1"]:checked'
+        );
+
+        let q2 = document.querySelector(
+            'input[name="q2"]:checked'
+        );
+
+        let result = document.getElementById(
+            "quiz-result"
+        );
+
+
+        if (!q1 || !q2) {
+
+            result.innerHTML =
+                "⚠️ Please answer all questions.";
+
+            return;
+        }
+
+
+        if (q1.value === "elephant") {
+            score++;
+        }
+
+
+        if (q2.value === "nose") {
+            score++;
+        }
+
+
+        if (score === 2) {
+
+            correctSound.currentTime = 0;
+
+            correctSound.play();
+
+            result.innerHTML =
+                "🎉 Excellent! Your score: " +
+                score +
+                " / 2";
+
+        } else {
+
+            wrongSound.currentTime = 0;
+
+            wrongSound.play();
+
+            result.innerHTML =
+                "😊 Your score: " +
+                score +
+                " / 2. Try again!";
+
+        }
+
     }
 
-    if (q2 && q2.value === "nose") {
-        score++;
+
+
+    /* =========================
+       GAME
+    ========================= */
+
+    function checkGame(answer) {
+
+        let result = document.getElementById(
+            "game-result"
+        );
+
+
+        if (answer === "elephant") {
+
+            correctSound.currentTime = 0;
+
+            correctSound.play();
+
+            result.innerHTML =
+                "🎉 Correct! You found the elephant! 🐘";
+
+        } else {
+
+            wrongSound.currentTime = 0;
+
+            wrongSound.play();
+
+            result.innerHTML =
+                "❌ Not quite! Try again.";
+
+        }
+
     }
-
-    let result = document.getElementById("quiz-result");
-
-    if (!q1 || !q2) {
-        result.innerHTML = "⚠️ Please answer all questions.";
-        return;
-    }
-
-    if (score === 2) {
-        correctSound.currentTime = 0;
-        correctSound.play();
-    } else {
-        wrongSound.currentTime = 0;
-        wrongSound.play();
-    }
-
-    result.innerHTML = "🎉 Your score: " + score + " / 2";
-}
-
-
-function checkGame(answer) {
-    let result = document.getElementById("game-result");
-
-    if (answer === "elephant") {
-
-        let sound = new Audio("correct.mp3");
-        sound.play();
-
-        result.innerHTML = "🎉 Correct! You found the elephant! 🐘";
-
-    } else {
-
-        let sound = new Audio("wrong.mp3");
-        sound.play();
-
-        result.innerHTML = "❌ Not quite! Try again.";
-    }
-}
-}
 
 </script>
 
