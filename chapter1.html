@@ -723,18 +723,20 @@ function checkGame(answer) {
     let result = document.getElementById("game-result");
 
     if (answer === "elephant") {
-        correctSound.currentTime = 0;
-        correctSound.play();
+
+        let sound = new Audio("correct.mp3");
+        sound.play();
 
         result.innerHTML = "🎉 Correct! You found the elephant! 🐘";
+
     } else {
-        wrongSound.currentTime = 0;
-        wrongSound.play();
+
+        let sound = new Audio("wrong.mp3");
+        sound.play();
 
         result.innerHTML = "❌ Not quite! Try again.";
     }
 }
-
 }
 
 </script>
