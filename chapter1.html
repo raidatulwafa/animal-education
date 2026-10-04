@@ -108,6 +108,33 @@ nav a:hover {
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
         }
 
+        .animal-intro {
+    background: linear-gradient(135deg, #ffffff, #f1f8e9);
+    border: 2px solid #c8e6c9;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.animal-intro::before {
+    content: "🐘";
+    position: absolute;
+    right: -15px;
+    top: -25px;
+    font-size: 130px;
+    opacity: 0.08;
+    transform: rotate(10deg);
+}
+
+.animal-intro h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 32px;
+    color: #1b5e20;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
         .section h2 {
             color: #2e7d32;
             margin-bottom: 18px;
@@ -461,7 +488,7 @@ nav a:hover {
 
     <!-- ABOUT THE ANIMAL -->
 
-    <section class="section">
+    <section class="section animal-intro">
 
         <h2>📖 About the Elephant</h2>
 
