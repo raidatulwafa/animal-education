@@ -22,21 +22,37 @@
             line-height: 1.7;
         }
 
-        header {
-            background: #2e7d32;
-            color: white;
-            text-align: center;
-            padding: 35px 20px;
-        }
+       header {
+    background:
+        linear-gradient(rgba(0, 60, 20, 0.35), rgba(0, 40, 10, 0.35)),
+        url("animal-header.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+    position: relative;
+    overflow: hidden;
+}
 
-        header h1 {
-            font-size: 40px;
-            margin-bottom: 8px;
-        }
+header h1 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+    animation: titleFadeIn 1s ease-out;
+}
 
-        header p {
-            font-size: 18px;
-        }
+header p {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+}
 
         nav {
             background: #1b5e20;
@@ -397,6 +413,18 @@
 }
         }
 
+@keyframes titleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+        
     </style>
 </head>
 
