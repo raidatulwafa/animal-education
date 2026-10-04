@@ -233,16 +233,35 @@ nav a:hover {
             font-style: italic;
         }
 
-        .video-box {
-            text-align: center;
-        }
+        .section > p {
+    color: #546e7a;
+    font-size: 17px;
+    line-height: 1.7;
+}
 
-        .video-box iframe {
-            width: 100%;
-            max-width: 560px;
-            height: 315px;
-            border-radius: 15px;
-        }
+       .video-box {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.video-box iframe {
+    width: 100%;
+    max-width: 700px;
+    height: 395px;
+    border: none;
+    border-radius: 22px;
+    box-shadow: 0 10px 25px rgba(46, 125, 50, 0.18);
+    transition: 0.3s ease;
+}
+
+.video-box iframe:hover {
+    transform: scale(1.01);
+    box-shadow: 0 14px 30px rgba(46, 125, 50, 0.25);
+}
+
+        .video-box + p {
+    text-align: center;
+}
 
         audio {
             width: 100%;
@@ -437,8 +456,9 @@ nav a:hover {
             }
 
             .video-box iframe {
-                height: 220px;
-            }
+    height: 230px;
+    border-radius: 16px;
+}
 
             .game-option {
                 width: 100%;
