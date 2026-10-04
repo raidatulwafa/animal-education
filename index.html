@@ -98,48 +98,68 @@ nav a:hover {
 
 .hero {
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(180deg, #e8f5e9, #f5f8f2);
+    padding: 110px 20px 100px;
+    background:
+        radial-gradient(circle at 15% 30%, rgba(129, 199, 132, 0.25), transparent 25%),
+        radial-gradient(circle at 85% 70%, rgba(255, 224, 130, 0.22), transparent 25%),
+        linear-gradient(135deg, #f1f8e9, #ffffff, #e8f5e9);
     position: relative;
     overflow: hidden;
 }
 
 .hero::before {
-    content: "🐾";
+    content: "🐘";
     position: absolute;
-    font-size: 140px;
     left: 5%;
-    top: 30px;
-    opacity: 0.08;
-    transform: rotate(-15deg);
+    top: 45px;
+    font-size: 90px;
+    opacity: 0.12;
+    transform: rotate(-10deg);
 }
 
 .hero::after {
-    content: "🌿";
+    content: "🦋";
     position: absolute;
-    font-size: 140px;
-    right: 5%;
-    bottom: 10px;
-    opacity: 0.08;
-    transform: rotate(15deg);
+    right: 7%;
+    bottom: 40px;
+    font-size: 80px;
+    opacity: 0.12;
+    transform: rotate(10deg);
 }
 
 .hero h2 {
-    font-family: 'Arial', sans-serif;
-    font-size: 46px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 50px;
     font-weight: 700;
-    color: #2e7d32;
-    margin-bottom: 20px;
+    line-height: 1.15;
+    color: #1b5e20;
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 1;
+    animation: titleFadeIn 1s ease-out;
+}
+
+.hero p {
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 19px;
+    line-height: 1.8;
+    color: #455a64;
     position: relative;
     z-index: 1;
 }
 
-.hero p {
-    max-width: 750px;
-    margin: auto;
-    font-size: 19px;
-    line-height: 1.8;
-    color: #455a64;
+        .hero-badge {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 8px 18px;
+    border-radius: 30px;
+    background: white;
+    color: #2e7d32;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     position: relative;
     z-index: 1;
 }
@@ -236,7 +256,14 @@ nav a:hover {
     </nav>
 
     <section class="hero">
-    <h2>Welcome to Animal Education 🌿</h2>
+   <div class="hero-badge">
+    🌿 LEARN • DISCOVER • EXPLORE 🌿
+</div>
+
+<h2>
+    Welcome to<br>
+    Animal Education 🐾
+</h2>
 
     <p>
         Discover interesting facts about animals mentioned in the Quran.
