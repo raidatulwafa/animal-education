@@ -98,15 +98,40 @@ nav a:hover {
 
 .hero {
     text-align: center;
-    padding: 90px 20px;
+    padding: 100px 20px;
     background: linear-gradient(180deg, #e8f5e9, #f5f8f2);
     position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "🐾";
+    position: absolute;
+    font-size: 140px;
+    left: 5%;
+    top: 30px;
+    opacity: 0.08;
+    transform: rotate(-15deg);
+}
+
+.hero::after {
+    content: "🌿";
+    position: absolute;
+    font-size: 140px;
+    right: 5%;
+    bottom: 10px;
+    opacity: 0.08;
+    transform: rotate(15deg);
 }
 
 .hero h2 {
-    font-size: 42px;
-    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 46px;
+    font-weight: 700;
     color: #2e7d32;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .hero p {
@@ -115,7 +140,10 @@ nav a:hover {
     font-size: 19px;
     line-height: 1.8;
     color: #455a64;
+    position: relative;
+    z-index: 1;
 }
+        
         .chapters {
             padding: 50px 8%;
         }
