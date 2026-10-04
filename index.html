@@ -46,6 +46,23 @@ header h1 {
     margin-bottom: 10px;
     position: relative;
     z-index: 1;
+    animation: titleFadeIn 1s ease-out;
+}
+
+    @keyframes titleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header h1 {
+    animation: titleFadeIn 1s ease-out;
 }
 
 header p {
