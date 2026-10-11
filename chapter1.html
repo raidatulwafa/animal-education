@@ -818,11 +818,89 @@ nav a:hover {
     text-align: center;
 }
 
-/* AUDIO */
-audio {
+```css
+/* QURAN & AUDIO CONTAINER */
+
+.quran-audio-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 25px;
+    align-items: stretch;
+}
+
+/* QURAN BOX */
+
+.quran-box {
+    background: #e8f5e9;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid #a5d6a7;
+    text-align: center;
+}
+
+.quran-box h3,
+.audio-box h3 {
+    color: #1b5e20;
+    margin-bottom: 18px;
+    font-size: 22px;
+}
+
+/* QURAN IMAGE */
+
+.quran-image {
+    display: block;
     width: 100%;
-    margin-top: 20px;
-    accent-color: var(--teal);
+    max-width: 450px;
+    height: auto;
+    margin: 15px auto;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+/* TRANSLATION */
+
+.translation {
+    font-style: italic;
+    margin-top: 18px;
+    line-height: 1.8;
+}
+
+.verse-reference {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+/* AUDIO BOX */
+
+.audio-box {
+    background: #fff8e1;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid #ffcc80;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.audio-box p {
+    margin-bottom: 20px;
+}
+
+.audio-box audio {
+    width: 100%;
+    max-width: 350px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+    .quran-audio-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* QUIZ */
@@ -1076,6 +1154,44 @@ footer {
         text-align: center;
     }
 }
+
+/* BILINGUAL TRANSLATION */
+
+.translation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.translation-malay,
+.translation-english {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #2e7d32;
+}
+
+.translation h4 {
+    color: #1b5e20;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.translation p {
+    font-style: normal;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* MOBILE VIEW */
+
+@media (max-width: 600px) {
+    .translation {
+        grid-template-columns: 1fr;
+    }
+}
         
     </style>
         
@@ -1173,59 +1289,78 @@ footer {
 
 
 
-    <!-- QURAN -->
+<!-- QURAN & AUDIO -->
 
-    <section class="section">
+<section class="section">
 
-        <h2>📖 The Elephant in the Quran</h2>
+    <h2>📖 The Elephant in the Quran</h2>
 
-        <p>
-            The elephant is connected with the story described in
-            <strong>Surah Al-Fil (Chapter 105)</strong>.
-            The surah tells about the people of the elephant and
-            Allah's protection of the Ka'bah.
-        </p>
+    <p>
+        The elephant is connected with the story described in
+        <strong>Surah Al-Fil (Chapter 105)</strong>.
+        The surah tells about the people of the elephant and
+        Allah's protection of the Ka'bah.
+    </p>
 
+    <div class="quran-audio-container">
 
+        <!-- QURAN BOX -->
         <div class="quran-box">
 
-            <p class="arabic">
-                أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ
-            </p>
+            <h3>📜 Surah Al-Fil (105:1)</h3>
 
-            <p class="translation">
-                "Have you not seen how your Lord dealt with the
-                companions of the elephant?"
-            </p>
+            <img src="ayat-al-fil.png"
+                 alt="Surah Al-Fil verse 1 in Arabic"
+                 class="quran-image">
+        </div>
+    
+<!-- TRANSLATION -->
+
+<div class="translation">
+
+    <div class="translation-malay">
+        <h4>🇲🇾 Bahasa Melayu</h4>
+
+        <p>
+            Tidakkah engkau mengetahui bagaimana Tuhanmu
+            telah bertindak terhadap tentera bergajah?
+        </p>
+    </div>
+
+    <div class="translation-english">
+        <h4>🇬🇧 English Translation</h4>
+
+        <p>
+            Have you not seen how your Lord dealt with
+            the companions of the elephant?
+        </p>
+    </div>
+
+</div>
+
+<p class="verse-reference">
+    — Surah Al-Fil, 105:1
+</p>
+
+        <!-- AUDIO BOX -->
+        <div class="audio-box">
+
+            <h3>🎧 Quran Recitation</h3>
 
             <p>
-                — Surah Al-Fil, 105:1
+                Listen to the recitation of Surah Al-Fil.
             </p>
+
+            <audio controls>
+                <source src="al-fil.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
 
         </div>
 
-    </section>
+    </div>
 
-
-
-    <!-- AUDIO -->
-
-    <section class="section">
-
-        <h2>🎧 Quran Recitation</h2>
-
-        <p>
-            Listen to the recitation of Surah Al-Fil.
-        </p>
-
-        <audio controls>
-
-            <source src="al-fil.mp3" type="audio/mpeg">
-
-        </audio>
-
-    </section>
-
+</section>
 
 
     <!-- QUIZ -->
