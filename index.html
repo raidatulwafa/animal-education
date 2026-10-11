@@ -1,3 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Scientific Quranic Exegesis</title>
+    
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        background: #f4f7fb;
+        color: #263449;
+    }
+
+    /* HEADER */
+    header {
+        background-image:
+            linear-gradient(
+                rgba(8, 20, 55, 0.55),
+                rgba(10, 35, 65, 0.65)
+            ),
+            url("fenomena header.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    header h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 65px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        line-height: 1.2;
+        margin-bottom: 18px;
+        position: relative;
+        z-index: 1;
+        text-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+        animation: titleFadeIn 1s ease-out;
+    }
+
+    @keyframes titleFadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    header p {
+        font-size: 18px;
+        line-height: 1.7;
+        max-width: 750px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* NAVIGATION */
+    nav {
+        background: #101f3c;
+        padding: 15px;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    nav a {
+        display: inline-block;
+        color: #ffffff;
+        text-decoration: none;
+        margin: 0 8px;
+        padding: 9px 18px;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        background: #d4af37;
+        color: #101f3c;
+        transform: translateY(-2px);
+    }
+
+    /* HERO SECTION */
+    .hero {
+        text-align: center;
+        padding: 100px 20px;
+        background:
+            radial-gradient(
+                circle at 10% 20%,
+                rgba(59, 130, 246, 0.13),
+                transparent 30%
+            ),
+            radial-gradient(
+                circle at 90% 80%,
+                rgba(212, 175, 55, 0.16),
+                transparent 30%
+            ),
+            linear-gradient(
+                135deg,
+                #e8eef9,
+                #ffffff,
+                #e0f2ef
+            );
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero::before {
+        content: "✦";
+        position: absolute;
+        left: 8%;
+        top: 35px;
+        font-size: 100px;
+        color: #d4af37;
+        opacity: 0.45;
+        transform: rotate(-10deg);
+    }
+
+    .hero::after {
+        content: "⚛️";
+        position: absolute;
+        right: 7%;
+        bottom: 25px;
+        font-size: 100px;
+        color: #176b67;
+        opacity: 0.20;
+    }
+
+    .hero h2 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 45px;
+        font-weight: 800;
+        line-height: 1.25;
+        color: #14284b;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 1;
+        animation: titleFadeIn 1s ease-out;
+    }
+
+    .hero p {
+        max-width: 750px;
+        margin: 0 auto;
+        font-size: 18px;
+        line-height: 1.9;
+        color: #46566d;
+        position: relative;
+        z-index: 1;
+    }
+
 /* HERO BADGE */
     .hero-badge {
         display: inline-block;
