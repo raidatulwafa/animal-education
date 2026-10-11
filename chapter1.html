@@ -13,386 +13,525 @@
     <title>Chapter 1 - Meteorology</title>
 
     <style>
-        
-:root {
-    --navy: #10182f;
-    --navy-light: #14284b;
-    --gold: #d6b76a;
-    --gold-light: #f7efd9;
-    --teal: #176b67;
-    --teal-light: #e0f2ef;
-    --background: #f5f7fb;
-    --white: #ffffff;
-    --text: #263449;
-    --muted: #627086;
-    --border: #e0e7f0;
-}
 
-* {
-    box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-html {
-    scroll-behavior: smooth;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f8f2;
+            color: #263238;
+            line-height: 1.7;
+        }
 
-body {
-    margin: 0;
-    font-family: 'Inter', 'Poppins', Arial, sans-serif;
-    background: var(--background);
-    color: var(--text);
-    line-height: 1.7;
-}
-
-/* HEADER */
-header {
+       header {
     background:
-        linear-gradient(135deg, rgba(16, 24, 47, 0.88), rgba(20, 40, 75, 0.82)),
+        linear-gradient(rgba(0, 60, 20, 0.35), rgba(0, 40, 10, 0.35)),
         url("fenomena header.jpeg");
     background-size: cover;
     background-position: center;
-    color: var(--white);
+    background-repeat: no-repeat;
+    color: white;
     text-align: center;
-    padding: 65px 20px;
-    border-bottom: 4px solid var(--gold);
+    padding: 70px 20px;
+    position: relative;
+    overflow: hidden;
 }
 
 header h1 {
-    margin: 0;
-    color: var(--gold);
-    font-family: 'Poppins', sans-serif;
-    font-size: clamp(28px, 4vw, 46px);
-    font-weight: 800;
-    letter-spacing: 2px;
+    font-family: 'Arial', sans-serif;
+    font-size: 70px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+    animation: titleFadeIn 1s ease-out;
 }
 
 header p {
-    max-width: 750px;
-    margin: 12px auto 0;
-    color: #eef2fa;
-    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
 }
 
-/* NAVIGATION */
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 16px 20px;
-    background: var(--navy);
-    border-bottom: 1px solid rgba(214, 183, 106, 0.4);
+       nav {
+    background: #164d1c;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav a {
-    color: var(--white);
+    display: inline-block;
+    color: white;
     text-decoration: none;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    padding: 10px 18px;
-    border-radius: 6px;
-    transition: 0.25s ease;
+    margin: 0 8px;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    background: var(--gold);
-    color: var(--navy);
-}
-
-/* MAIN CONTENT */
-.container {
-    width: min(1100px, 92%);
-    margin: 35px auto;
-}
-
-.chapter-title {
-    color: var(--navy);
-    font-family: 'Poppins', sans-serif;
-    font-size: clamp(26px, 3vw, 36px);
-    font-weight: 800;
-    text-align: center;
-    margin: 10px 0 28px;
-}
-
-h2,
-h3 {
-    color: var(--navy);
-    font-family: 'Poppins', sans-serif;
-}
-
-h2 {
-    font-size: 25px;
-}
-
-h3 {
-    font-size: 19px;
-}
-
-/* CONTENT SECTIONS */
-section {
-    margin-bottom: 28px;
-}
-
-.animal-intro,
-.facts,
-.quran-box,
-.video-box,
-.audio-box,
-.quiz-box,
-.game-box {
-    background: var(--white);
-    padding: 28px;
-    margin: 24px 0;
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    box-shadow: 0 8px 24px rgba(16, 24, 47, 0.06);
-}
-
-.animal-intro {
-    border-top: 4px solid var(--gold);
-}
-
-.animal-intro p,
-.facts p,
-.quran-box p,
-.video-box p,
-.audio-box p {
-    color: var(--text);
-}
-
-/* IMAGES */
-.animal-intro img,
-.container img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 20px auto;
-    border-radius: 14px;
-}
-
-/* FACTS */
-.facts {
-    background: var(--teal-light);
-    border-color: #c6e4df;
-}
-
-.facts h2,
-.facts h3 {
-    color: var(--teal);
-}
-
-/* QURAN BOX */
-.quran-box {
-    background: var(--gold-light);
-    border-left: 5px solid var(--gold);
-}
-
-.quran-box h2,
-.quran-box h3 {
-    color: var(--navy);
-}
-
-.arabic,
-.arabic-text {
-    font-family: 'Traditional Arabic', 'Amiri', serif;
-    font-size: 30px;
-    line-height: 2;
-    text-align: right;
-    color: var(--navy);
-}
-
-/* VIDEO */
-.video-box {
-    border-top: 4px solid var(--teal);
-}
-
-.video-box iframe {
-    display: block;
-    width: 100%;
-    max-width: 800px;
-    aspect-ratio: 16 / 9;
-    height: auto;
-    margin: 18px auto 0;
-    border: 0;
-    border-radius: 12px;
-}
-
-/* AUDIO */
-.audio-box {
-    border-top: 4px solid var(--gold);
-}
-
-audio {
-    display: block;
-    width: 100%;
-    max-width: 600px;
-    margin: 16px 0;
-}
-
-/* QUIZ */
-.quiz-box {
-    border-top: 4px solid var(--teal);
-}
-
-.question {
-    margin: 22px 0;
-    padding: 18px;
-    background: #f5f7fb;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-}
-
-.question p {
-    font-weight: 700;
-    color: var(--navy);
-}
-
-.quiz-box label {
-    display: block;
-    margin: 10px 0;
-    cursor: pointer;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-    accent-color: var(--teal);
-    margin-right: 8px;
-}
-
-/* GAME */
-.game-box {
-    background: var(--gold-light);
-    border: 1px solid #ead9a8;
-    border-top: 4px solid var(--gold);
-    text-align: center;
-}
-
-.game-box h2,
-.game-box h3 {
-    color: var(--navy);
-}
-
-/* BUTTONS */
-button,
-.button,
-.btn {
-    display: inline-block;
-    background: var(--gold);
-    color: var(--navy);
-    border: 0;
-    border-radius: 8px;
-    padding: 12px 22px;
-    font-family: inherit;
-    font-size: 14px;
-    font-weight: 800;
-    cursor: pointer;
-    text-decoration: none;
-    transition: 0.25s ease;
-}
-
-button:hover,
-.button:hover,
-.btn:hover {
-    background: var(--navy);
-    color: var(--gold);
+    background: #43a047;
     transform: translateY(-2px);
 }
 
-/* FEEDBACK MESSAGES */
-#result,
-#quiz-result,
-#game-result,
-.result {
-    margin-top: 16px;
-    font-weight: 700;
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .chapter-title {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+    .chapter-title h2 {
+    font-size: 36px;
+    color: #2e7d32;
 }
 
-/* PAGE NAVIGATION */
-.page-navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin: 35px 0;
+        .section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 18px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .animal-intro {
+    background: linear-gradient(135deg, #ffffff, #f1f8e9);
+    border: 2px solid #c8e6c9;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
 }
 
-.page-navigation a {
-    display: inline-block;
-    padding: 12px 20px;
-    background: var(--navy);
-    color: var(--white);
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 700;
-    transition: 0.25s ease;
+.animal-intro::before {
+    content: "🐘";
+    position: absolute;
+    right: -15px;
+    top: -25px;
+    font-size: 130px;
+    opacity: 0.08;
+    transform: rotate(10deg);
 }
 
-.page-navigation a:hover {
-    background: var(--gold);
-    color: var(--navy);
+.animal-intro h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 32px;
+    color: #1b5e20;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
 }
 
-/* FOOTER */
-footer {
-    background: var(--navy);
-    color: #e8edf7;
+        .animal-intro > p {
+    max-width: 850px;
+    margin: 0 auto 18px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #455a64;
     text-align: center;
-    padding: 25px 20px;
-    margin-top: 50px;
-    border-top: 4px solid var(--gold);
+    position: relative;
+    z-index: 1;
 }
 
-footer p {
-    margin: 0;
-    font-size: 13px;
+.animal-intro > p:last-of-type {
+    margin-bottom: 30px;
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 600px) {
-    header {
-        padding: 45px 16px;
-    }
+        .section h2 {
+            color: #2e7d32;
+            margin-bottom: 18px;
+            font-size: 27px;
+        }
 
-    nav {
-        gap: 4px;
-        padding: 12px 8px;
-    }
-
-    nav a {
-        padding: 9px 11px;
-        font-size: 12px;
-    }
-
-    .container {
-        width: 94%;
-        margin: 22px auto;
-    }
-
-    .animal-intro,
-    .facts,
-    .quran-box,
-    .video-box,
-    .audio-box,
-    .quiz-box,
-    .game-box {
-        padding: 18px;
-        border-radius: 12px;
-    }
-
-    .page-navigation {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .page-navigation a {
-        text-align: center;
-    }
+        .animal-image {
+    width: 100%;
+    max-width: 650px;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+    margin: 25px auto 30px;
+    border-radius: 22px;
+    background: #e8f5e9;
+    border: 4px solid white;
+    box-shadow: 0 10px 25px rgba(46, 125, 50, 0.18);
+    transition: 0.4s ease;
 }
 
-</style>
+.animal-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 14px 30px rgba(46, 125, 50, 0.25);
+}
+
+       .facts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.fact {
+    background: white;
+    padding: 22px 15px;
+    border-radius: 16px;
+    text-align: center;
+    border: 2px solid #c8e6c9;
+    box-shadow: 0 5px 12px rgba(46, 125, 50, 0.08);
+    transition: 0.3s ease;
+}
+
+.fact:hover {
+    transform: translateY(-6px);
+    background: #f1f8e9;
+    box-shadow: 0 10px 20px rgba(46, 125, 50, 0.15);
+}
+
+.fact strong {
+    display: block;
+    color: #2e7d32;
+    font-size: 20px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.fact {
+    font-size: 15px;
+    color: #546e7a;
+    line-height: 1.5;
+}
+
+        .quran-box {
+            background: #f1f8e9;
+            border-left: 5px solid #2e7d32;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .arabic {
+            font-size: 27px;
+            text-align: right;
+            line-height: 2;
+            margin-bottom: 15px;
+        }
+
+        .translation {
+            font-style: italic;
+        }
+
+        .section > p {
+    color: #546e7a;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+       .video-box {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.video-box iframe {
+    width: 100%;
+    max-width: 700px;
+    height: 395px;
+    border: none;
+    border-radius: 22px;
+    box-shadow: 0 10px 25px rgba(46, 125, 50, 0.18);
+    transition: 0.3s ease;
+}
+
+.video-box iframe:hover {
+    transform: scale(1.01);
+    box-shadow: 0 14px 30px rgba(46, 125, 50, 0.25);
+}
+
+        .video-box + p {
+    text-align: center;
+}
+
+        audio {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .quiz-question {
+            background: #f5f8f2;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .quiz-question h3 {
+            margin-bottom: 15px;
+        }
+
+        .quiz-question label {
+            display: block;
+            background: white;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+        }
+
+        .quiz-question label:hover {
+            background: #e8f5e9;
+        }
+
+        .quiz-button,
+        .game-button {
+            background: #2e7d32;
+            color: white;
+            border: none;
+            padding: 13px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .quiz-button:hover,
+        .game-button:hover {
+            background: #1b5e20;
+        }
+
+        #quiz-result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .quiz-box {
+    background: #f1f8e9;
+    border: 2px solid #81c784;
+    border-radius: 18px;
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.quiz-question {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 18px;
+}
+
+.quiz-question p {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.quiz-question label {
+    display: block;
+    padding: 10px;
+    margin: 6px 0;
+    background: #fafafa;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.quiz-question label:hover {
+    background: #e8f5e9;
+}
+
+.quiz-button {
+    display: block;
+    margin: 20px auto 10px;
+    padding: 12px 25px;
+    background: #43a047;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.quiz-button:hover {
+    background: #2e7d32;
+    transform: scale(1.05);
+}
+
+#quiz-result {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+        .game-box {
+            text-align: center;
+        }
+
+        .game-options {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .game-option {
+            padding: 18px 25px;
+            background: #e8f5e9;
+            border: 2px solid #2e7d32;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .game-option:hover {
+            background: #c8e6c9;
+        }
+
+        #game-result {
+    margin: 20px auto 0;
+    padding: 15px;
+    max-width: 500px;
+    font-size: 19px;
+    font-weight: bold;
+    border-radius: 12px;
+    background: white;
+    min-height: 24px;
+    transition: 0.3s;
+}
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .navigation a {
+            text-decoration: none;
+            background: #2e7d32;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+        }
+
+        footer {
+            background: #1b5e20;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            .chapter-title h2 {
+                font-size: 28px;
+            }
+
+            .facts {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+            .section {
+                padding: 20px;
+            }
+
+            .video-box iframe {
+    height: 230px;
+    border-radius: 16px;
+}
+
+            .game-option {
+                width: 100%;
+            }
+
+            .navigation {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .navigation a {
+                text-align: center;
+            }
+
+            .game-box {
+    background: #fff8e1;
+    border: 2px solid #ffcc80;
+    border-radius: 18px;
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.game-box > p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.game-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.game-option {
+    padding: 15px;
+    background: white;
+    border: 2px solid #ffcc80;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.game-option:hover {
+    background: #fff3e0;
+    transform: scale(1.05);
+}
+
+#game-result {
+    margin-top: 20px;
+    font-size: 19px;
+    font-weight: bold;
+}
+        }
+
+@keyframes titleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+        
+    </style>
         
 </head>
 
